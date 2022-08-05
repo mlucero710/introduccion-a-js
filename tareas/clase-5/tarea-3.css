@@ -1,0 +1,47 @@
+body {
+    background-color: #2f2c79;
+    color: #fff;
+}
+
+h4 {
+    text-align: center;
+    justify-content: center;
+}
+
+.contenedor-video{
+    text-align: center;
+    padding: 10px;
+}
+
+.casillero-texto {
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid #666f88
+}
+
+.boton-contenedor{ 
+    text-align: center;
+    justify-content: center;
+    padding: 7px;  
+}
+
+
+
+#calcular, #reset {
+    background-color: blue;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#calcular:hover {
+    background-color: darkblue
+}
+
+#reset{
+    background-color: red;
+}
+#reset:hover{
+    background-color:darkred
+}

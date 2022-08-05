@@ -20,9 +20,7 @@ document.querySelector("#calcular").onclick = function() {
     }
 
     const textoResultado = document.createTextNode(` ${totalHoras} horas ${totalMinutos} minutos y ${totalSegundos} segundos`);
-    const textoStrong = document.createElement('strong');
-    textoStrong.appendChild(textoResultado)
-    $resultadoCalculo.appendChild(textoStrong);
+    $resultadoCalculo.appendChild(textoResultado);
         
    
 }
@@ -34,4 +32,8 @@ function sumarTiempo(tiempo){
         
     }
     return totalTiempo;
+}
+
+document.querySelector("#reset").onclick = function() {
+    document.querySelector("#resultado-calculo").textContent = "El tiempo total es de: "
 }

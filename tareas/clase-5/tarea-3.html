@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tarea-3.css">
     <title>Calculador de Tiempo</title>
 </head>
 <body>
@@ -11,42 +12,47 @@
     <form onsubmit="return false">
         <div class="contenedor-video">
             <h4>Video 1</h4>
-            <input type="number" class="horas-video" placeholder="Ingrese las horas">
-            <input type="number" class="minutos-video" placeholder="Ingrese los minutos">
-            <input type="number" class="segundos-video" placeholder="Ingrese las segundos">
+            <input type="number" class="horas-video casillero-texto" placeholder="Ingrese las horas">
+            <input type="number" class="minutos-video casillero-texto" placeholder="Ingrese los minutos">
+            <input type="number" class="segundos-video casillero-texto" placeholder="Ingrese las segundos">
         </div>
 
         <div class="contenedor-video">
             <h4>Video 2</h4>
-            <input type="number" class="horas-video" placeholder="Ingrese las horas">
-            <input type="number" class="minutos-video" placeholder="Ingrese los minutos">
-            <input type="number" class="segundos-video" placeholder="Ingrese las segundos">
+            <input type="number" class="horas-video casillero-texto" placeholder="Ingrese las horas">
+            <input type="number" class="minutos-video casillero-texto" placeholder="Ingrese los minutos">
+            <input type="number" class="segundos-video casillero-texto" placeholder="Ingrese las segundos">
         </div>
 
         <div class="contenedor-video">
             <h4>Video 3</h4>
-            <input type="number" class="horas-video" placeholder="Ingrese las horas">
-            <input type="number" class="minutos-video" placeholder="Ingrese los minutos">
-            <input type="number" class="segundos-video" placeholder="Ingrese las segundos">
+            <input type="number" class="horas-video casillero-texto" placeholder="Ingrese las horas">
+            <input type="number" class="minutos-video casillero-texto" placeholder="Ingrese los minutos">
+            <input type="number" class="segundos-video casillero-texto" placeholder="Ingrese las segundos">
         </div>
 
         <div class="contenedor-video">
             <h4>Video 4</h4>
-            <input type="number" class="horas-video" placeholder="Ingrese las horas">
-            <input type="number" class="minutos-video" placeholder="Ingrese los minutos">
-            <input type="number" class="segundos-video" placeholder="Ingrese las segundos">
+            <input type="number" class="horas-video casillero-texto" placeholder="Ingrese las horas">
+            <input type="number" class="minutos-video casillero-texto" placeholder="Ingrese los minutos">
+            <input type="number" class="segundos-video casillero-texto" placeholder="Ingrese las segundos">
         </div>
 
         <div class="contenedor-video">
             <h4>Video 5</h4>
-            <input type="number" class="horas-video" placeholder="Ingrese las horas">
-            <input type="number" class="minutos-video" placeholder="Ingrese los minutos">
-            <input type="number" class="segundos-video" placeholder="Ingrese las segundos">
+            <input type="number" class="horas-video casillero-texto" placeholder="Ingrese las horas">
+            <input type="number" class="minutos-video casillero-texto" placeholder="Ingrese los minutos">
+            <input type="number" class="segundos-video casillero-texto" placeholder="Ingrese las segundos">
         </div>
-
-        <input type="submit" value="Calcular tiempo total" id="calcular">
+        <div class="boton-contenedor">
+            <input type="submit" value="Calcular tiempo total" id="calcular" class="boton">
+        </div>
+        <div class="boton-contenedor">
+            <input type="reset" class="boton" id="reset">
+        </div>
+        
     </form>
-    <p id="resultado-calculo"><strong>El tiempo total es de: </strong></p>
+    <strong id="resultado-calculo">El tiempo total es de: </strong>
     <script src='tarea-3.js'></script>
 </body>
 </html>

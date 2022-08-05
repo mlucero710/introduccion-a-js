@@ -1,0 +1,36 @@
+body {
+    background-color: #2f2c79;
+    color: #fff;
+}
+
+#lista-numeros{
+    align-items: center;
+}
+
+ol {
+    text-align: center;
+    list-style-type: none;
+    list-style-position: inside;  
+    font-size:50px;
+}
+
+#calcular {
+    background-color: blue;
+    color: #fff;
+    border: none;
+    padding: 20px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#calcular:hover {
+    background-color: darkblue
+}
+
+em{
+    display: block;
+    text-align: center;
+}
+div{
+    text-align: center;
+    padding: 20px;
+}

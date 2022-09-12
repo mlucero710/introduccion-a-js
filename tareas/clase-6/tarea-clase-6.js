@@ -6,6 +6,120 @@ Al hacer click en "calcular", mostrar en un elemento pre-existente la mayor edad
 Punto bonus: Crear un botón para "empezar de nuevo" que empiece el proceso nuevamente, borrando los inputs ya creados (investigar cómo en MDN).
 */
 
+function crearIntegrante(indice){
+    const integrante = document.createElement('div');
+    integrante.className = 'integrante'
+
+    const label = document.createElement('label');
+    label.textContent = `Integrante ${indice}`;
+
+    const input = document.createElement('input');
+    input.placeholder = 'Ingrese la edad del integrante';
+    input.type = 'number';
+
+    integrante.appendChild(label);
+    integrante.appendChild(input);
+
+    const contenedor = document.querySelector('#contenedor-integrantes');
+
+    contenedor.appendChild(integrante)
+}
+
+document.querySelector("#confirmar-integrantes").onclick = function(){
+    reiniciar();
+    $cantidadIntegrantes = document.querySelector('#cantidad-integrantes').value;
+    for(let i = 0; i < $cantidadIntegrantes; i++){
+        crearIntegrante(i+1);
+    }
+    mostrarBotones()
+    
+
+    return false
+}
+
+function obtenerEdades(){
+    const $integrantes = document.querySelectorAll('.integrante input');
+    const edades = [];
+
+    for(let i = 0; i < $integrantes.length; i++){
+        edades.push(Number($integrantes[i].value));
+    }
+    return edades
+}
+
+document.querySelector('#calcular').onclick = function(){
+    const edades = obtenerEdades()
+    
+    const edadMayor = calcularMayor(edades);
+    document.querySelector('#mayor-edad').textContent = edadMayor;
+
+    const edadMenor = calcularMenor(edades);
+    document.querySelector('#menor-edad').textContent = edadMenor;
+
+    const edadPromedio = calcularPromedio(edades);
+    document.querySelector('#promedio-edad').textContent = edadPromedio;
+
+    mostrarResultado();
+    return false
+}
+
+document.querySelector('#resetear').onclick = function(){
+    reiniciar()
+}
+
+function calcularMayor(listaNumeros){
+    let mayor = listaNumeros[0]
+    for(let i = 0; i< listaNumeros.length; i++) {
+        if (listaNumeros[i] > mayor){
+            mayor = listaNumeros[i]
+        }
+    }
+    return mayor
+}
+
+function calcularMenor(listaNumeros){
+    let menor = listaNumeros[0]
+    for(let i = 0; i< listaNumeros.length; i++) {
+        if (listaNumeros[i] < menor){
+            menor = listaNumeros[i]
+        }
+    }
+    return menor
+}
+
+function calcularPromedio(listaNumeros){
+    let acumulador = 0;
+    for(let i = 0; i < listaNumeros.length; i++){
+        acumulador += listaNumeros[i]
+    }
+    return acumulador / listaNumeros.length
+}
+
+function mostrarBotones(){
+    document.querySelector('#calcular').className = '';
+    document.querySelector('#resetear').className = '';
+}
+
+function mostrarResultado(){
+    document.querySelector('#resultado').className = '';
+}
+
+function ocultarResultado(){
+    document.querySelector('#resultado').className = 'oculto';
+}
+
+function ocultarBotones(){
+    document.querySelector('#calcular').className = 'oculto';
+    document.querySelector('#resetear').className = 'oculto';
+}
+function reiniciar(){
+    ocultarResultado()
+    ocultarBotones()
+    const $integrantes = document.querySelectorAll('.integrante')
+    for(let i = 0; i < $integrantes.length; i++){
+        $integrantes[i].remove();
+    }
+}
 
 /*
 TAREA:

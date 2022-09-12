@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tarea-clase-6.css"
+</head>
+<body>
+    <form id="formulario">
+        <h4>Ingrese la cantidad de integrantes en su familia :</h4>
+        <input type="number" id="cantidad-integrantes" placeholder="cantidad de integrantes">
+        <button type="submit" id="confirmar-integrantes">confirmar</button>
+
+        <div id="contenedor-integrantes">
+
+        </div>
+        <button id="calcular" class="oculto">Calcular</button>
+
+        <div id="resultado" class="oculto">
+            <p>La edad mayor es: <strong id="mayor-edad"></strong></p>
+            <p>La edad menor es: <strong id="menor-edad"></strong></p>
+            <p>El promedio de las edades es: <strong id="promedio-edad"></strong></p>
+        </div>
+
+        <button type="reset" id="resetear" class="oculto">Reiniciar</button>
+    </form>
+    <script src="tarea-clase-6.js"></script>
+</body>
+</html>
